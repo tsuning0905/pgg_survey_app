@@ -28,7 +28,6 @@ html, body {
 /* Inputs MUST stay selectable/editable for data entry */
 input, textarea, select { -webkit-user-select: text; user-select: text; }
 #app { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
-
 /* ===================== HEADER ===================== */
 .header {
   display: flex; align-items: center;
@@ -45,20 +44,16 @@ input, textarea, select { -webkit-user-select: text; user-select: text; }
 }
 .header .title { flex: 1; line-height: 1.2; }
 .header .step { font-size: 14px; opacity: 0.85; font-weight: 500; }
-
 /* progress bar */
 .progress { height: 4px; background: rgba(255,255,255,0.18); }
 .progress > div { height: 100%; background: rgba(255,255,255,0.75); transition: width 0.2s; }
-
 /* ===================== CONTENT ===================== */
 .content { flex: 1; padding: 16px; display: flex; flex-direction: column; }
 .content.center { justify-content: center; align-items: center; text-align: center; }
-
 h2 { font-size: 22px; margin: 8px 0 12px; font-weight: 600; }
 h3 { font-size: 17px; margin: 18px 0 6px; font-weight: 600; opacity: 0.95; }
 p, label { font-size: 16px; line-height: 1.45; }
 .big-msg { font-size: 22px; line-height: 1.5; margin: 12px 0; }
-
 /* ===================== BUTTONS ===================== */
 .btn {
   display: block; width: 100%;
@@ -80,7 +75,6 @@ p, label { font-size: 16px; line-height: 1.45; }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .btn-row { display: flex; gap: 12px; }
 .btn-row .btn { flex: 1; }
-
 /* ===================== INPUTS ===================== */
 .field { margin: 14px 0; }
 .field label { display: block; margin-bottom: 6px; font-size: 14px; opacity: 0.9; }
@@ -100,7 +94,6 @@ p, label { font-size: 16px; line-height: 1.45; }
 input::placeholder { color: rgba(255,255,255,0.45); }
 input:disabled { opacity: 0.4; }
 select option { color: #000; }
-
 /* ===================== QUESTION CARD ===================== */
 .qcard {
   background: rgba(255,255,255,0.10);
@@ -120,7 +113,6 @@ select option { color: #000; }
 .qcard.invalid { border-color: rgba(255,140,140,0.9); }
 .qhint { font-size: 13px; opacity: 0.75; margin: 4px 0; }
 .qerr { font-size: 13px; color: #ffd0d0; margin: 6px 0 0; min-height: 0; }
-
 /* ===================== OPTION ROWS ===================== */
 .opts { margin-top: 6px; }
 .opt {
@@ -144,7 +136,6 @@ select option { color: #000; }
 .opt.multi .mark { border-radius: 6px; }
 .opt.selected { background: rgba(255,255,255,0.30); border-color: #fff; }
 .opt.selected .mark { background: #fff; color: #13343b; border-color: #fff; }
-
 /* services grid */
 .svc-row {
   display: flex; align-items: center; gap: 8px;
@@ -158,7 +149,6 @@ select option { color: #000; }
   background: rgba(255,255,255,0.06); cursor: pointer; font-size: 14px;
 }
 .svc-row .yn.on { background: #fff; color: #13343b; border-color: #fff; font-weight: 700; }
-
 /* ===================== NOTES / BANNERS ===================== */
 .note {
   background: rgba(255,255,255,0.10);
@@ -182,7 +172,6 @@ select option { color: #000; }
   border-radius: 12px; padding: 14px; font-size: 14px; margin: 10px 0;
 }
 .subhead { font-weight: 700; font-size: 16px; margin: 16px 0 4px; }
-
 /* ===================== TAP CHIPS (network IDs / skip pills) ===================== */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
 .chip {
@@ -203,7 +192,6 @@ select option { color: #000; }
 .chip.skip.on { background: #ffd9d9; color: #7a1f1f; border-color: #ffd9d9; }
 .qwarn { font-size: 13px; color: #ffe1a8; margin: 6px 0 0; min-height: 0; }
 .opt-disabled { opacity: 0.4; }
-
 /* ===================== REVIEW ===================== */
 .issue {
   border-radius: 12px; padding: 12px 14px; margin: 8px 0; font-size: 14px; line-height: 1.4;
@@ -214,7 +202,6 @@ select option { color: #000; }
 .issue .itag { font-weight: 700; margin-right: 6px; }
 .ack-row { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; font-size: 14px; }
 .ack-row input { width: 22px; height: 22px; margin-top: 2px; }
-
 /* ===================== LIST CARDS ===================== */
 .list-card {
   background: rgba(255,255,255,0.14);
@@ -228,7 +215,6 @@ select option { color: #000; }
 .list-card .lc-id { font-weight: 700; font-size: 16px; }
 .list-card .lc-sub { font-size: 13px; opacity: 0.8; }
 .list-card .lc-badge { font-size: 12px; padding: 3px 8px; border-radius: 999px; background: rgba(255,255,255,0.25); }
-
 /* ===================== UTILITY ===================== */
 .spacer { flex: 1; }
 .muted { opacity: 0.85; }
@@ -258,7 +244,6 @@ hr.divider { border: none; border-top: 1px solid rgba(255,255,255,0.35); margin:
    All data is stored in localStorage so the app works fully offline.
    UI language mirrors the sibling PGG Field App (translucent cards, dark base).
 ============================================================================= */
-
 /* ---------- OPTION SETS (reused) ---------- */
 const FREQ   = ["Never","Just once or twice","A few times","Often","Don't know","Refused"];
 const LIKERT = ["Strongly agree","Agree","Neither agree nor disagree","Disagree","Strongly disagree","Don't know","Refused"];
@@ -267,7 +252,6 @@ const SPEED  = ["Within a few days","Within a few weeks","Within a few months","
 const PAYL   = ["Very unlikely","Somewhat unlikely","Neither","Somewhat likely","Very likely","Don't know","Refused"];
 const LAW    = ["Only written law","Mostly written law","Equally both","Mostly customary law (umthetho wesithethe)","Only customary law","Don't know","Refused"];
 const STMT5  = ["1 Agree very strongly with Statement 1","2 Agree with Statement 1","3 Agree with neither","4 Agree with Statement 2","5 Agree very strongly with Statement 2","Don't know","Refused"];
-
 /* ---------- PARTICIPANT ID: format is GG_MM (group-colour _ member) ----------
    Group colour -> number: Red=01, Orange=02, Yellow=03, Green=04, Blue=05, Purple=06.
    Members within a group: 01..04. So Red member 1 = "01_01", Purple member 4 = "06_04". */
@@ -287,7 +271,6 @@ function idOrder(id){ const p=parsePid(id); return p?(p.g*1000+p.m):999999; }
 function participantIdFull(village, run, twoPart){
   return pad2(Number(village)||0)+'_'+pad2(Number(run)||1)+'_'+String(twoPart||'');
 }
-
 /* ---------- QUESTION SCHEMA ----------
    type drives both rendering and validation.
      single   : choose exactly one (opts)
@@ -348,7 +331,6 @@ const RECORD_OPTS = [
   "Other",
   "Don't know","Refused"
 ];
-
 const Q = {
   Q1:{t:"freq",  text:"Over the past year, how often have you attended meetings of a church group (other than regular religious services)?", opts:FREQ},
   Q2:{t:"freq",  text:"Over the past year, how often have you attended meetings of a local self-help association such as a stokvel, burial society (umbutho wangcwabo), or neighbourhood watch?", opts:FREQ},
@@ -359,7 +341,6 @@ const Q = {
       exclusive:["None of the above","Don't know","Refused"]},
   Q6:{t:"single",text:"When you get together with friends or neighbours, would you say you discuss community or political matters?",
       opts:["Frequently","Occasionally","Never","Don't know","Refused"]},
-
   Q7:{t:"idself", text:"Your number on the whiteboard is:"},
   Q8:{t:"idlist", text:"Which participants are household members of yours — e.g. spouse, parent, child, or sibling? (Write participant numbers)"},
   Q9:{t:"idlist", text:"Which participants are relatives living in a different homestead (umzi) from yours? (Write participant numbers)"},
@@ -369,14 +350,12 @@ const Q = {
   Q13:{t:"idlist",text:"Which participants would you borrow money from, lend money to, or exchange gifts with in a financial emergency? (Write participant numbers)"},
   Q14:{t:"idlist",text:"Which participants do you cooperate with in farming or business activities — e.g. sharing tools, joint herding, ilima work parties, joint trading? (Write participant numbers)"},
   Q15:{t:"idlist",text:"Which participants are izifiki — newcomers or people from outside your clan area — that you know by name? (Write participant numbers)"},
-
   Q16:{t:"single",text:"It is safe to openly express disagreement in this village — including at an imbizo.", opts:LIKERT},
   Q17:{t:"single",text:"Major decisions in this village are usually made through open discussion (e.g. at an imbizo).", opts:LIKERT},
   Q18:{t:"single",text:"People in the village usually follow rules and norms that have been decided together.", opts:LIKERT},
   Q19:{t:"single",text:"People in the village usually act for the collective good (ubuntu) — for example, by participating in ilima, maintaining communal water points, or contributing to shared projects.", opts:LIKERT},
   Q20:{t:"single",text:"Generally speaking, would you say that most people in this village can be trusted, or that you can't be too careful in dealing with people?",
       opts:["Most people can be trusted","Can't be too careful","Don't know","Refused"]},
-
   Q21:{t:"multi", other:true,
       text:"If money or materials are provided for a community purpose, how are community members usually informed about how they are used? (Select all that apply)",
       opts:INFORM_OPTS, exclusive:["Not usually announced","Don't know","Refused"]},
@@ -386,7 +365,6 @@ const Q = {
   Q22:{t:"single",text:"Villagers are able to openly challenge the inkosi's decisions.", opts:LIKERT},
   Q23:{t:"single",text:"People who have good relationships with the inkosi or induna find it easier to access resources such as land, grants, or jobs.", opts:LIKERT},
   Q24:{t:"single",text:"Decisions about resources in this village sometimes favour particular families or clans (isiduko).", opts:LIKERT},
-
   Q25:{t:"single",text:"When the inkosi makes a decision, how confident are you that this decision will be fair?", opts:CONF,
       groupHeader:"(a) If they took their dispute to the village inkosi:"},
   Q26:{t:"single",text:"How quickly do you think the inkosi will make a decision?", opts:SPEED},
@@ -397,11 +375,9 @@ const Q = {
   Q30:{t:"single",text:"How quickly do you think the Magistrate's Court will make a decision?", opts:SPEED},
   Q31:{t:"single",text:"How likely is it that Sipho and Thabo will have to make payments — formal or informal — to the Magistrate's Court to settle the case?", opts:PAYL},
   Q32:{t:"single",text:"Will the Magistrate's Court rely on written South African law, on isiXhosa customary law (umthetho wesithethe), or equally on both?", opts:LAW},
-
   Q33:{t:"single",text:"If you won a prize of R500 in this experiment, would you prefer the result to be announced publicly in this room, or communicated to you privately?",
       opts:["It doesn't matter to me","Announced publicly in this room","Communicated privately"]},
   Q34:{t:"amount500",text:"If you prefer to receive the result privately, what is the maximum amount you would be willing to pay to keep the result private? (Only answer if you chose 'Communicated privately' above)"},
-
   Q36:{t:"text",  text:"Your full name:", placeholder:"Full name"},
   Q37:{t:"single",text:"Gender:", opts:["Male","Female","Other / prefer not to say"]},
   Q38:{t:"number",text:"Age:", unit:"years", min:0, max:130, intOnly:true},
@@ -411,7 +387,6 @@ const Q = {
   Q42:{t:"text",  text:"Secondary occupation (if any):", placeholder:"Leave blank if none", optional:true},
   Q43:{t:"number",text:"Total number of people living in your household, including yourself:", unit:"persons", min:0, max:60, intOnly:true},
   Q44:{t:"number",text:"Number of working household members (anyone earning income, including grants):", unit:"persons", min:0, max:60, intOnly:true},
-
   Q45:{t:"single",other:true,text:"What is the PRIMARY source of your household's income? (Select the most important one)",
       opts:["Farming / livestock","Wage employment (formal job)","Casual / piece work (temporary)","Self-employment / spaza / hawking","Government grants (e.g. child support grant, old-age pension, disability grant)","Remittances — money sent by family members from the city or at the mines","Other"]},
   Q46:{t:"single",text:"Is your household income:", opts:["Regular and predictable","Seasonal (e.g. harvest, contract work)","Irregular","Very uncertain"]},
@@ -423,7 +398,6 @@ const Q = {
   Q50:{t:"number",text:"Total number of rooms:", unit:"rooms", min:0, max:40, intOnly:true},
   Q51:{t:"services",text:"Which of the following services does your household have access to? (Yes or No for each)"},
   Q52:{t:"landuse",text:"Do you own or have the right to use agricultural land? If yes — how was land access obtained?"},
-
   Q53:{t:"yesno", text:"Were you born in this village?"},
   Q54:{t:"number",text:"How many years have you lived in this village?", unit:"years", min:0, max:130, intOnly:true},
   Q55:{t:"livedout",text:"Have you ever lived outside this village continuously for more than 6 months? (If yes: where and for how long?)"},
@@ -433,7 +407,6 @@ const Q = {
       opts:["Work / employment","Business / trading","Visiting family (e.g. at the mines, Cape Town, East London)","Shopping / accessing services","School / study","Medical / clinic","Church / religious gathering","Other"]},
   Q58:{t:"text",  text:"Mobile phone number (in case the research team needs to follow up):", placeholder:"Optional", optional:true}
 };
-
 const SECTIONS = [
   {n:1, title:"Civic Participation", note:"Read: \u201CThe following questions ask about your participation in local groups. Please answer based on your own experience.\u201D", ids:["Q1","Q2","Q3","Q4","Q5","Q6"]},
   {n:2, title:"Social Network Mapping", instruction:"Every participant in this session is listed on the whiteboard by their colour-number ID (for example 01_03 = Red, member 3). The Chief is shown by name, with no number. Answer by writing the applicable participant IDs (e.g. 01_03, 02_01). To include the Chief, write CHIEF. If no one applies, write \u201CN/A\u201D.", ids:["Q7","Q8","Q9","Q10","Q11","Q12","Q13","Q14","Q15"]},
@@ -449,7 +422,6 @@ const SECTIONS = [
   {n:9, title:"Village Residency and Mobility", ids:["Q53","Q54","Q55","Q56","Q57","Q58"]}
 ];
 const ALL_IDS = SECTIONS.reduce((a,s)=>a.concat(s.ids),[]);
-
 /* =============================================================================
    STORAGE
 ============================================================================= */
@@ -472,7 +444,6 @@ function makeFreshState() {
   };
 }
 let STATE = loadState() || makeFreshState();
-
 /* =============================================================================
    ROUTER (mirrors the field app: pushState so hardware back can be intercepted)
 ============================================================================= */
@@ -484,7 +455,6 @@ function go(name, args = {}) {
   try { history.pushState({ route:name, routeArgs:args, survey:true }, '', ''); } catch (e) {}
   render();
 }
-
 /* =============================================================================
    HELPERS
 ============================================================================= */
@@ -504,7 +474,6 @@ function defaultAnswer(type){
   }
 }
 function draftAnswers(){ return STATE.draft ? STATE.draft.answers : null; }
-
 /* parse a free-text list of participant IDs (GG_MM); "N/A"/empty => na; "CHIEF" => chief flag */
 function parseIdList(raw){
   const t=(raw||'').trim();
@@ -521,7 +490,6 @@ function parseIdList(raw){
 }
 function isNum(v){ return v!=='' && v!=null && !isNaN(Number(v)); }
 function numVal(v){ return Number(v); }
-
 /* ---- Required-gating: is a question currently required, and is it answered? ----
    A question counts as "answered" when an explicit choice exists. Because every
    choice question carries Refused / Don't know, and idlist carries N/A, and
@@ -553,7 +521,6 @@ function missingRequired(secNum, ans){
   const sec=SECTIONS.find(s=>s.n===secNum); if(!sec) return [];
   return sec.ids.filter(id=>isVisibleRequired(id,ans) && !isAnswered(id,ans));
 }
-
 /* =============================================================================
    VALIDATION — pure function. Returns { hard:[], soft:[] } of {sec,q,msg}.
 ============================================================================= */
@@ -563,18 +530,15 @@ function validateSurvey(answers, setup){
   const H=(q,msg)=>hard.push({sec:secOf(q), q, msg});
   const S=(q,msg)=>soft.push({sec:secOf(q), q, msg});
   const choice = id => (answers[id]&&typeof answers[id]==='object') ? answers[id].choice : answers[id];
-
   /* valid participant IDs are GG_MM (group-colour _ member) */
   const selfPid = parsePid(answers.Q7);
   const selfId  = answers.Q7 ? String(answers.Q7).trim() : '';
-
   /* ---- ID / Q7 ---- */
   if(!selfId){
     H('Q7','ID / Q7 is missing.');
   } else if(!selfPid || !validPid(selfPid.g, selfPid.m, setup)){
     H('Q7','ID '+selfId+' is not a valid participant ID (expected GG_MM, e.g. 01_03; group 1\u2013'+numGroups(setup)+', member 1\u2013'+membersPerGroup(setup)+').');
   }
-
   /* ---- Q8\u2013Q15 network lists ---- */
   const netParsed={};
   ['Q8','Q9','Q10','Q11','Q12','Q13','Q14','Q15'].forEach(id=>{
@@ -593,14 +557,12 @@ function validateSurvey(answers, setup){
   /* Q8 vs Q11 (same household vs adjacent-homestead neighbour) — soft */
   const ov811 = netParsed.Q8.ids.filter(n=>netParsed.Q11.ids.includes(n));
   if(ov811.length) S('Q11','Number(s) appear in both Q8 (same household) and Q11 (adjacent-homestead neighbour): '+ov811.join(', ')+'.');
-
   /* ---- Q5 exclusivity (backstop; input layer also enforces) ---- */
   const q5 = answers.Q5||[];
   const q5excl = (Q.Q5.exclusive||[]).filter(o=>q5.includes(o));
   const q5spec = q5.filter(o=>!(Q.Q5.exclusive||[]).includes(o));
   if(q5excl.length && q5spec.length) H('Q5','\u201C'+q5excl.join(' / ')+'\u201D cannot be combined with specific contacts.');
   if(q5excl.length>1) H('Q5','Only one of None / Don\u2019t know / Refused may be selected.');
-
   /* ---- Q33 \u2192 Q34 \u2192 Q35 skip logic ---- */
   const q33 = choice('Q33');
   const q34 = answers.Q34 || {amount:'',na:false};
@@ -612,7 +574,6 @@ function validateSurvey(answers, setup){
     const amt = numVal(q34.amount);
     if(amt<0 || amt>500) H('Q34','Willingness-to-pay must be between 0 and 500 ZAR.');
   }
-
   /* ---- Range checks ---- */
   const age = isNum(answers.Q38) ? numVal(answers.Q38) : null;
   if(answers.Q38!=='' && !isRefusedVal(answers.Q38)){
@@ -639,13 +600,11 @@ function validateSurvey(answers, setup){
     if(yrs<0) H('Q54','Years lived cannot be negative.');
     if(age!=null && yrs>age) H('Q54','Years lived in village ('+yrs+') cannot exceed age ('+age+').');
   }
-
   /* ---- Q52 land-use skip logic ---- */
   const lu = answers.Q52||{own:'',methods:[],other:''};
   if(lu.own==='No' && ((lu.methods&&lu.methods.length) || (lu.other&&lu.other.trim()))) {
     H('Q52','Land-access method must be empty when the answer is \u201CNo\u201D.');
   }
-
   /* ---- Q55 lived-outside skip logic ---- */
   const lo = answers.Q55||{lived:'',where:'',duration:''};
   if(lo.lived==='No' && ((lo.where&&lo.where.trim()) || (lo.duration&&lo.duration.trim()))) {
@@ -654,19 +613,16 @@ function validateSurvey(answers, setup){
   if(lo.lived==='Yes' && !(lo.where&&lo.where.trim()) && !(lo.duration&&lo.duration.trim())) {
     S('Q55','Answered \u201CYes\u201D but Where / Duration is blank.');
   }
-
   /* ---- Q56 \u2192 Q57 skip logic ---- */
   const q56 = choice('Q56');
   const q57 = choice('Q57');
   if(q56==='Never' && (q57 || (answers.Q57 && answers.Q57.other && answers.Q57.other.trim()))) {
     H('Q57','Reason for travel must be N/A when Q56 = \u201CNever\u201D.');
   }
-
   /* ---- Consistency: Q53 / Q54 / Q55 ---- */
   if(answers.Q53==='Yes' && lo.lived==='No' && yrs!=null && age!=null && (age-yrs)>2){
     S('Q54','Born here and never lived away, but years lived ('+yrs+') is well below age ('+age+').');
   }
-
   /* ---- Name / ID cross-check against roster (if loaded) ---- */
   if(setup.roster && setup.roster.length && selfId){
     const rec = setup.roster.find(r=>String(r.id).trim()===selfId);
@@ -676,11 +632,9 @@ function validateSurvey(answers, setup){
     }
   }
   if(!(answers.Q36||'').trim()) S('Q36','Full name is blank \u2014 needed to cross-check against the household survey.');
-
   /* ---- Vignette completeness Q25\u2013Q32 ---- */
   const vmiss = ['Q25','Q26','Q27','Q28','Q29','Q30','Q31','Q32'].filter(id=>!choice(id));
   if(vmiss.length && vmiss.length<8) S(vmiss[0],'Vignette is partially answered \u2014 missing '+vmiss.join(', ')+'. Both the inkosi and Magistrate sets should be completed.');
-
   /* ---- Q51 services sanity ---- */
   const svc = answers.Q51||{};
   if(svc.piped_inside==='No' && svc.piped_yard==='No' && svc.communal_tap==='No' &&
@@ -690,7 +644,6 @@ function validateSurvey(answers, setup){
   if(svc.flush_inside==='Yes' && svc.flush_outside==='Yes'){
     S('Q51','Both an inside and an outside flush toilet recorded \u2014 uncommon, please confirm.');
   }
-
   /* ---- General unanswered note (non-blocking) ---- */
   const unanswered=[];
   ALL_IDS.forEach(id=>{
@@ -709,10 +662,8 @@ function validateSurvey(answers, setup){
     if(empty) unanswered.push(id);
   });
   if(unanswered.length) soft.push({sec:secOf(unanswered[0]), q:'\u2014', msg:unanswered.length+' question(s) left blank: '+unanswered.join(', ')+'. Confirm these were intentionally skipped.'});
-
   return {hard, soft};
 }
-
 /* =============================================================================
    RENDER
 ============================================================================= */
@@ -725,7 +676,6 @@ function render(){
   };
   (renderers[route]||renderHome)(app);
 }
-
 /* ---------- SETUP ---------- */
 function renderSetup(app){
   const s = STATE.setup || {};
@@ -810,7 +760,6 @@ function renderSetup(app){
   };
   const cancel=document.getElementById('f-cancel'); if(cancel) cancel.onclick=()=>go('home');
 }
-
 /* ---------- HOME ---------- */
 function renderHome(app){
   const s=STATE.setup;
@@ -845,6 +794,7 @@ function renderHome(app){
       <div class="spacer"></div>
       <button class="btn" id="exp">Export to CSV</button>
       <button class="btn outline" id="roster">Manage roster / valid IDs</button>
+      <button class="btn danger" id="reset">\u26A0 Reset All Data</button>
     </div>
   `;
   document.getElementById('set').onclick=()=>go('setup');
@@ -852,9 +802,20 @@ function renderHome(app){
   const rb=document.getElementById('resume'); if(rb) rb.onclick=()=>go('section',{section:STATE.draft.lastSection||1});
   document.getElementById('exp').onclick=()=>go('exportData');
   document.getElementById('roster').onclick=()=>go('settings');
+  document.getElementById('reset').onclick=()=>{
+    const n=(STATE.surveys||[]).length;
+    const msg = n>0
+      ? 'Reset ALL data on this device? This permanently deletes the session setup, the roster, and all '+n+' collected survey(s), and cannot be undone.\n\nExport to CSV first if you have not already.'
+      : 'Reset all data on this device? This clears the session setup and roster, and cannot be undone.';
+    if(confirm(msg)){
+      STATE = makeFreshState();
+      saveState();
+      go('setup');
+      showToast('All data reset');
+    }
+  };
   app.querySelectorAll('[data-view]').forEach(el=>el.onclick=()=>go('viewSurvey',{index:Number(el.dataset.view)}));
 }
-
 /* ---------- ROSTER / SETTINGS ---------- */
 function renderSettings(app){
   const roster=(STATE.setup.roster||[]);
@@ -876,7 +837,6 @@ function renderSettings(app){
   };
   document.getElementById('clear').onclick=()=>{ STATE.setup.roster=[]; saveState(); showToast('Roster cleared'); render(); };
 }
-
 /* ---------- ID ENTRY (start a new survey) ---------- */
 function renderIdEntry(app){
   const s=STATE.setup;
@@ -911,7 +871,6 @@ function renderIdEntry(app){
     saveState(); go('section',{section:1});
   };
 }
-
 /* =============================================================================
    SECTION SCREEN
 ============================================================================= */
@@ -921,14 +880,11 @@ function renderSection(app){
   const ans=draftAnswers();
   if(!ans){ go('home'); return; }
   STATE.draft.lastSection=secNum; saveState();
-
   let body='';
   if(sec.note) body+=`<div class="note"><span class="flag">\u2691 Facilitator:</span> ${escapeHtml(sec.note)}</div>`;
   if(sec.instruction) body+=`<div class="note">${escapeHtml(sec.instruction)}</div>`;
   if(sec.story) body+=`<div class="story">${escapeHtml(sec.story)}</div>`;
-
   sec.ids.forEach(id=>{ body+=renderQuestion(id, ans); });
-
   const pct=Math.round(secNum/SECTIONS.length*100);
   app.innerHTML=`
     <div class="header">
@@ -944,7 +900,6 @@ function renderSection(app){
         </div>
       </div>
     </div>`;
-
   wireQuestions(sec, ans);
   document.getElementById('home').onclick=()=>{ saveState(); go('home'); };
   document.getElementById('prev').onclick=()=>{ saveState(); if(secNum===1) go('home'); else go('section',{section:secNum-1}); };
@@ -968,7 +923,6 @@ function renderSection(app){
     if(secNum===SECTIONS.length) go('review'); else go('section',{section:secNum+1});
   };
 }
-
 /* Validate the whole draft but surface only the CURRENT section's HARD errors
    inline (red card + message). Returns the array of hard issues for this section. */
 function showSectionIssues(secNum){
@@ -985,15 +939,12 @@ function showSectionIssues(secNum){
   });
   return hard;
 }
-
 /* ---------- render one question ---------- */
 function renderQuestion(id, ans){
   const def=Q[id]; const a=ans[id];
   let inner='';
   const choice = (a&&typeof a==='object')?a.choice:a;
-
   if(def.groupHeader) inner+=`<div class="subhead">${escapeHtml(def.groupHeader)}</div>`;
-
   inner+=`<div class="qcard" id="card-${id}">`;
   inner+=`<span class="qnum">${id}</span>`;
   if(def.t==='statement5'){
@@ -1001,7 +952,6 @@ function renderQuestion(id, ans){
   } else {
     inner+=`<div class="qtext">${escapeHtml(def.text)}${def.optional?' <span class="muted">(optional)</span>':''}</div>`;
   }
-
   switch(def.t){
     case 'freq': case 'single': case 'statement5': case 'prizeAB': {
       inner+='<div class="opts">';
@@ -1138,35 +1088,27 @@ function renderQuestion(id, ans){
   inner+=`</div>`;
   return inner;
 }
-
 /* ---------- wire events for a section (delegation) ---------- */
 function wireQuestions(sec, ans){
   const body=document.getElementById('qbody');
   // these triggers change conditional visibility => re-render the section
   const VISIBILITY_TRIGGERS = ['Q33','Q56'];
-
   body.querySelectorAll('.opt, .yn').forEach(el=>{
     el.onclick=()=>{
       const id=el.dataset.q; if(!id) return;
       const def=Q[id]; const a=ans[id];
-
       // amount500 "Not applicable"
       if(el.dataset.na){ a.na=!a.na; if(a.na) a.amount=''; saveState(); rerenderSection(sec,ans); return; }
-
       // services grid
       if(el.dataset.row){ a[el.dataset.row]=el.dataset.val; saveState(); rerenderSection(sec,ans); return; }
-
       // land-use own
       if(el.dataset.own!==undefined && el.dataset.own!==''){ a.own=el.dataset.own; if(a.own!=='Yes'){a.methods=[];a.other='';} saveState(); rerenderSection(sec,ans); return; }
       // land-use method multi
       if(el.dataset.method){ const m=el.dataset.method; const i=a.methods.indexOf(m); if(i>=0)a.methods.splice(i,1); else a.methods.push(m); if(m==='Other'&&i>=0)a.other=''; saveState(); rerenderSection(sec,ans); return; }
-
       // lived-out yes/no
       if(el.dataset.lived!==undefined && el.dataset.lived!==''){ a.lived=el.dataset.lived; if(a.lived!=='Yes'){a.where='';a.duration='';} saveState(); rerenderSection(sec,ans); return; }
-
       // simple yes/no (Q53)
       if(def.t==='yesno' && el.dataset.val){ ans[id]=el.dataset.val; saveState(); rerenderSection(sec,ans); return; }
-
       // multi-select (Q5)
       if(def.t==='multi'){
         const o=el.dataset.val; const arr=ans[id]; const idx=arr.indexOf(o);
@@ -1184,7 +1126,6 @@ function wireQuestions(sec, ans){
         });
         return;
       }
-
       // single-select family
       if(['freq','single','statement5','prizeAB'].includes(def.t)){
         const o=el.dataset.val;
@@ -1203,7 +1144,6 @@ function wireQuestions(sec, ans){
       }
     };
   });
-
   // ----- idlist tap-chips (Q8–Q15): build the stored string from taps -----
   body.querySelectorAll('.chip[data-chip]').forEach(el=>{
     el.onclick=()=>{
@@ -1229,7 +1169,6 @@ function wireQuestions(sec, ans){
       const err=document.getElementById('err-'+id); if(err) err.textContent='';
     };
   });
-
   // ----- Refused / Don't know skip toggle for number & text fields -----
   body.querySelectorAll('.chip[data-skip]').forEach(el=>{
     el.onclick=()=>{
@@ -1238,7 +1177,6 @@ function wireQuestions(sec, ans){
       saveState(); rerenderSection(sec,ans);
     };
   });
-
   // text / number inputs (no section re-render, so focus is kept while typing)
   body.querySelectorAll('input[data-q]').forEach(el=>{
     if(el.disabled) return;
@@ -1266,7 +1204,6 @@ function wireQuestions(sec, ans){
     };
   });
 }
-
 /* build a network-list string from selected IDs + chief flag */
 function buildIdList(ids, chief){
   const parts=ids.slice(); if(chief) parts.push('CHIEF');
@@ -1283,14 +1220,12 @@ function updateNumWarn(id, ans){
   if(def.max!=null && n>def.max){ el.textContent='\u26A0 Above the expected maximum ('+def.max+') \u2014 please confirm.'; return; }
   if(id==='Q38' && n<18){ el.textContent='\u26A0 Under 18 \u2014 confirm this participant is eligible to consent.'; }
 }
-
 /* re-render whole section while preserving scroll (used after a structural change) */
 function rerenderSection(sec, ans){
   const y=window.scrollY;
   renderSection(document.getElementById('app'));
   window.scrollTo(0,y);
 }
-
 /* =============================================================================
    REVIEW
 ============================================================================= */
@@ -1337,7 +1272,6 @@ function renderReview(app){
   document.getElementById('back').onclick=()=>go('section',{section:SECTIONS.length});
   document.getElementById('edit').onclick=()=>go('section',{section:SECTIONS.length});
   app.querySelectorAll('.issue[data-sec]').forEach(el=>{ const sn=el.dataset.sec; if(sn) el.onclick=()=>go('section',{section:Number(sn)}); });
-
   document.getElementById('eid-save').onclick=()=>{
     const eerr=document.getElementById('eid-err');
     const g=Number(document.getElementById('eid-g').value), m=Number(document.getElementById('eid-m').value);
@@ -1349,7 +1283,6 @@ function renderReview(app){
     STATE.draft.id=newId; STATE.draft.answers.Q7=newId; saveState();
     showToast('ID changed to '+newId); go('review');
   };
-
   const saveBtn=document.getElementById('save');
   const ack=document.getElementById('ack');
   function refresh(){ saveBtn.disabled = !canSaveBase || (ackNeeded && !ack.checked); }
@@ -1368,7 +1301,6 @@ function renderReview(app){
     showToast('Survey saved'); go('home');
   };
 }
-
 /* =============================================================================
    VIEW / EDIT / DELETE a saved survey
 ============================================================================= */
@@ -1414,7 +1346,6 @@ function answerSummary(id,ans){
     default: return (a==='' || a==null)?'\u2014':String(a);
   }
 }
-
 /* =============================================================================
    EXPORT CSV
 ============================================================================= */
@@ -1476,7 +1407,6 @@ function renderExport(app){
     try{ await navigator.clipboard.writeText(csv); showToast('Copied'); }catch(e){ showToast('Clipboard unavailable \u2014 use Download'); }
   };
 }
-
 /* =============================================================================
    STARTUP + back-button handling
 ============================================================================= */
